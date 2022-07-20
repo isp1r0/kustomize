@@ -7,7 +7,7 @@ COPY . /app
 
 RUN cd /app && npm run build
 
-FROM nginx:alpine
+FROM nginx:1-alpine
 RUN rm -rf /usr/share/nginx/html/*
 # todo(damienr74), put this in configmap.
 COPY nginx.conf /etc/nginx/nginx.conf
